@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <form onsubmit="myFunction(event)">
+    <form id="customer-form" onsubmit="myFunction(event)">
         <div class="mb-3">
           <label for="exampleName" class="form-label">Nazwa firmy</label>
           <input type="text" class="form-control" id="inputName" required>
@@ -60,17 +60,27 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
+    <div class="client-list" id="customer-list" style="display: none">
+      <ul class="list-group" id="customer-group"></ul>
+    </div>
+
+    <button type="button" onclick="showForm()">Show Form</button>
+
 
 
     <script>
+        var customersList = [];
+
         function myFunction(event) {
             event.preventDefault();
 
-            const dane = {
-                name: document.getElementById("inputName").value,
-            };
+            const customer = new Customer(document.getElementById("inputName").value);
 
-            console.log(dane);
+            console.log(customer);
+
+            customersList.push(customer);
+
+            showList()
 
             //puszhClient
         }
@@ -82,8 +92,28 @@
 
         //lista wszystkich klientów zapisana w danej sesji + formularz ma też dać możliwość wczytania i edycji poprzednich klientów
         function pushClient() {
-
+          
         }
+
+        function showForm() {
+          document.getElementById("customer-list").style.display="none";
+          document.getElementById("customer-form").style.display="block";
+        }
+
+        function showList() {
+          document.getElementById("customer-group").innerHTML = "";
+          console.log(customersList);
+          for(let customer in customersList) {
+            // to lepiej dorobić
+            document.getElementById("customer-group").innerHTML += `<li class="list-group-item">${customer.getData()}</li>`;
+          }
+          document.getElementById("customer-list").style.display="block";
+          document.getElementById("customer-form").style.display="none";
+        }
+
+
+        
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

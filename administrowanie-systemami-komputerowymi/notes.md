@@ -1,19 +1,19 @@
 # Install java ecommerce
 
-    * AWS via web
-        zalogować się do Amazona przez przegladarkę i ręcznie utworzyć tą instancję
-    * vscode
-    * cli -> gitbash, terminall
-    * vm & public ip
-        * confirm access
-        * private key + user
-    * repository
+* AWS via web
+    zalogować się do Amazona przez przegladarkę i ręcznie utworzyć tą instancję
+* vscode
+* cli -> gitbash, terminall
+* vm & public ip
+    * confirm access
+    * private key + user
+* repository
 
 ## Assumption
 
-    * IP: 3.74.158.108
-    * username: ec2-user
-    * key passphrase: student1
+* IP: 3.74.158.108
+* username: ec2-user
+* key passphrase: student1
 
 ## SHH Access
 ```bash
@@ -38,13 +38,13 @@
 
 
 ## install packages
-    * Packege manager
-        * Debian -> ``apt``
-        * Alpine -> ``apt``
-        * Amazon Linux -> ``dnf``
-    * Search for packages
-        * ``dnf search java``
-    * Install java package
+* Packege manager
+    * Debian -> ``apt``
+    * Alpine -> ``apt``
+    * Amazon Linux -> ``dnf``
+* Search for packages
+    * ``dnf search java``
+* Install java package
 
 
 ## Repository
