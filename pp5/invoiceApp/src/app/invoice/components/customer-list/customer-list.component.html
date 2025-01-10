@@ -1,1 +1,15 @@
-<p>customer-list works!</p>
+<div id="client-list">
+    <ul class="list-group" id="customer-list">
+        <app-customer-list-element 
+            *ngFor="let customer of customerList" 
+            [customer]="customer"
+            (deletedCustomerEvent)="deletedCustomer($event)">
+        </app-customer-list-element>
+    </ul>
+</div>
+
+
+
+<button type="button" class="btn btn-primary" (click)="redirect()">
+    Add new customer
+</button>
