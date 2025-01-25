@@ -1,0 +1,55 @@
+{
+  "customers": [
+    {
+      "name": "TEST"
+    },
+    {
+      "id": "53ee",
+      "name": "asdas",
+      "nip": 131,
+      "city": "dsfd",
+      "street": "dsg",
+      "houseNumber": "dsgd",
+      "zipCode": "dsg",
+      "comments": "dgs",
+      "industry": "1",
+      "active": true
+    },
+    {
+      "id": "f03c",
+      "name": "asdas",
+      "nip": 133,
+      "city": "dsfd",
+      "street": "dsg",
+      "houseNumber": "dsgd",
+      "zipCode": "dsg",
+      "comments": "",
+      "industry": "",
+      "active": true
+    },
+    {
+      "id": "2d09",
+      "name": "asdas",
+      "nip": 133,
+      "city": "dsfd",
+      "street": "dsg",
+      "houseNumber": "dsgd",
+      "zipCode": "dsg",
+      "comments": "",
+      "industry": "",
+      "active": true
+    },
+    {
+      "id": "8f18",
+      "name": "asdas",
+      "nip": 133,
+      "city": "dsfd",
+      "street": "dsg",
+      "houseNumber": "dsgd",
+      "zipCode": "dsg",
+      "comments": "",
+      "industry": "",
+      "active": true
+    }
+  ]
+}

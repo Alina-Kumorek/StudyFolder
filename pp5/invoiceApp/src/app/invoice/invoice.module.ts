@@ -5,6 +5,8 @@ import { InvoiceRoutingModule } from './invoice-routing.module';
 import { CustomerListComponent } from './components/customer-list/customer-list.component';
 import { FormsModule } from '@angular/forms';
 import { CustomerListElementComponent } from './components/customer-list-element/customer-list-element.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomerService } from './services/customer.service';
 
 
 
@@ -21,8 +23,10 @@ import { CustomerListElementComponent } from './components/customer-list-element
   imports: [
     FormsModule,
     CommonModule,
-    InvoiceRoutingModule
-  ]
+    InvoiceRoutingModule,
+    HttpClientModule
+  ],
+  providers: [CustomerService]
 })
 
 export class InvoiceModule { }

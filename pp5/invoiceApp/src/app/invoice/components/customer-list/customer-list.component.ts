@@ -17,7 +17,9 @@ export class CustomerListComponent implements OnDestroy {
     private customerService: CustomerService,
     private router: Router
   ){
-    this.customerList = this.customerService.getCustomers();
+    this.customerService.getCustomers().subscribe((data: Customer[]) => {
+      this.customerList=data;
+    });
     console.log(this.customerList);
   }
 

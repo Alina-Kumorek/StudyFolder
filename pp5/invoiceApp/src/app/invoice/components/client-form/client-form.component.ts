@@ -20,8 +20,15 @@ export class ClientFormComponent {
 
   onSubmit(){
     console.log(this.customer);
-    this.customerService.addCustomer(this.customer);
-    this.router.navigateByUrl("/invoice/customer-list");
+
+    this.customerService.addCustomer(this.customer).subscribe((data: Customer) => {
+      console.log(data);
+      alert("Zapisano dane");
+      this.router.navigateByUrl("/invoice/customer-list");
+    });
+
+
+    
   }
 
 }
